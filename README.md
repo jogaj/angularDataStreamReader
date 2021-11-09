@@ -2,7 +2,7 @@
 
 This project is to showcase how to consume and interact with a data-stream endpoint using Angular and NGRX to create a state Management solution.
 
-Important: The "real-data stream service" is an emulation built-in ont this project. It consists of a service that performs GET petitions by time intervals. 
+Important: The "real-data stream service" is an emulation build-in on this project. It consists of a service that performs GET petitions by time intervals. 
 
 ## Demo
 
@@ -27,10 +27,10 @@ An Angular application to stream real time posts.
 The application automatically will retrieve data from the API and also start collecting the statistics. When a filter is applied, the statistics are reset to collect the new information based on the filter.
 
 ## How to Run project locally
-- Download the code.
-- Open project and execute the command: 'npm install' or 'yarn install'
-- Additionally, execute command: 'ng serve'
-- Finally, open your browser in url: https://localhost:4200
+Download the code.
+Open project and execute the command: 'npm install' or 'yarn install'
+Additionally, execute command: 'ng serve'
+Finally, open your browser in url: https://localhost:4200
 
 ## Development server
 
