@@ -11,7 +11,7 @@ import { setFilterAction } from '../../stores';
   selector: 'app-post-filter',
   templateUrl: './post-filter.component.html',
   styleUrls: ['./post-filter.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostFilterComponent implements OnInit, OnDestroy {
 
@@ -42,6 +42,9 @@ export class PostFilterComponent implements OnInit, OnDestroy {
     this.updateFilterSubs();
   }
 
+  /**
+   * Angular life-cycle hook
+   */
   ngOnDestroy(): void {
     this.postsFilterSub?.unsubscribe();
   }
@@ -60,7 +63,9 @@ export class PostFilterComponent implements OnInit, OnDestroy {
    * Click button handler
    */
   filterHandler(): void {
-    this.setFilter(true);
+    if (this.validateOnFilterHandler()) {
+      this.setFilter(true);
+    }
   }
 
   /**
@@ -90,11 +95,19 @@ export class PostFilterComponent implements OnInit, OnDestroy {
 
   onSelectionChange(event: any): void {
     if (event == FilterType.NoFilter) {
-      this.render2.removeAttribute(this.filterTextBox.nativeElement, 'required');
+      this.filterModel.filterValue = '';
     }
-    else {
-      this.render2.setAttribute(this.filterTextBox.nativeElement, 'required', 'true');
+  }
+
+  /**
+   * Quick input validation. Forms should be implemented
+   */
+  validateOnFilterHandler(): boolean {
+    if (this.filterModel.filterType === FilterType.Likes && 
+        isNaN(this.filterModel.filterValue as any)) {
+          return false;
     }
+    return true;
   }
 
 }

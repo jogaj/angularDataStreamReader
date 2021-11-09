@@ -11,7 +11,7 @@
       </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>Filter value</mat-label>
-            <input #filterInput matInput [(ngModel)]="filterModel.filterValue">
+            <input #filterInput matInput [(ngModel)]="filterModel.filterValue" maxlength="30">
         </mat-form-field>
       <div class="flexCenter filterButton">
         <button mat-mini-fab color="primary" aria-label="Filter posts" (click)="filterHandler()">
