@@ -1,0 +1,30 @@
+.filterCard {
+    padding-bottom: 4px;
+    padding-top: 4px;
+
+    .filterContainer {
+        width: 100%;    
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 1fr;
+        column-gap: 3px;
+        font-size: 12px;
+
+        mat-form-field {
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+
+        mat-form-field + mat-form-field{
+            grid-column-start: 2;
+            grid-column-end: 2;
+        }
+
+        .filterButton {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            justify-content: flex-start;
+        }
+    }
+}

@@ -1,6 +1,27 @@
-# AngularDataStreamReader
+# DataStream Reader Emulator with Angular version 12.2.11 + NGRX + Angular Material
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+This project is to showcase how to consume a data-stream endpoints using [Angular][angular] and [RGRX][ngrx] State Management solution.
+Important: The "real-data stream" is an emulation built on this project. It consists of a service that performs GET petitions to an api in a certain time interval. The API will return 
+
+## Demo
+
+You can fnd:
+
+
+## Tech Stack
+
+- [Angular][angular]
+- [RGRX][ngrx]
+- [Angular Material][angularmaterial]
+
+## Features
+
+An Angular application to stream real time posts.
+
+- Built-in service to emulate the real-data stream.
+- Analytics statistics such as: Posts per second, total of post processed, total of likes process, oldest and newest post.
+- Ability to filter data.
+- Scroll panel with the list of post per request with Virtual Scroll (Angular CDK)
 
 ## Development server
 
@@ -17,10 +38,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 

@@ -1,0 +1,12 @@
+<div class="postContainer">
+    <mat-card class="postCard">
+        <mat-card-title-group>
+            <mat-card-title>{{ firstName|postOwnerPipe:lastName }}</mat-card-title>
+            <mat-card-subtitle>{{ publishDate | date:'medium' }}</mat-card-subtitle>
+            <img mat-card-sm-image src="{{ imgUrl }}" >
+        </mat-card-title-group>
+        <mat-card-content>
+            {{text}}
+        </mat-card-content>
+    </mat-card>
+</div>

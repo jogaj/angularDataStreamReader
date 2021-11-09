@@ -1,0 +1,15 @@
+<mat-card class="componentCard subComponentCard">
+    <mat-card-header>
+        <mat-card-subtitle>Real-time Posts</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="listContainer">
+            <cdk-virtual-scroll-viewport appendOnly itemSize="4">
+                <app-post *cdkVirtualFor="let post of postsRetrieved$ | async" [text]="post.text" 
+                    [imgUrl]="post.image" [publishDate]="post.publishDate" 
+                    [firstName]="post.owner.firstName" [lastName]="post.owner.lastName">
+                </app-post>
+              </cdk-virtual-scroll-viewport>
+        </div>
+    </mat-card-content>
+</mat-card>

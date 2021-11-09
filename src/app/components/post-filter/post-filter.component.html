@@ -1,0 +1,23 @@
+<mat-card class="componentCard subComponentCard filterCard">
+  <mat-card-content>
+    <div class="filterContainer">
+        <mat-form-field appearance="fill">
+          <mat-label>Filter by</mat-label>
+          <mat-select [(ngModel)]="filterModel.filterType" (valueChange)="onSelectionChange($event)" >
+            <mat-option *ngFor="let opt of options" [value]="opt.val">
+              {{opt.text}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Filter value</mat-label>
+            <input #filterInput matInput [(ngModel)]="filterModel.filterValue">
+        </mat-form-field>
+      <div class="flexCenter filterButton">
+        <button mat-mini-fab color="primary" aria-label="Filter posts" (click)="filterHandler()">
+          <mat-icon>search</mat-icon>
+      </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

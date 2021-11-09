@@ -1,0 +1,28 @@
+<mat-card class="componentCard subComponentCard">
+    <mat-card-header>
+        <mat-card-subtitle>Statistics</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="statsContainer">
+            <mat-icon color="accent" aria-label="Post per second icon" style="grid-area: r1c1;">pin</mat-icon>
+            <mat-label style="grid-area: r1c2;">Post per second</mat-label>
+            <mat-label style="grid-area: r1c3;">{{postPerSecond | number: '1.0-0'}}</mat-label>
+
+            <mat-icon color="accent" aria-label="Total posts icon" style="grid-area: r2c1;">feedback</mat-icon>
+            <mat-label style="grid-area: r2c2;">Total posts</mat-label>
+            <mat-label style="grid-area: r2c3;">{{statsModel.totalPost | number: '1.0-0'}}</mat-label>
+
+            <mat-icon color="accent" aria-label="Total likes icon" style="grid-area: r3c1;">favorite</mat-icon>
+            <mat-label style="grid-area: r3c2;">Total likes</mat-label>
+            <mat-label style="grid-area: r3c3;">{{statsModel.totalLikes | number: '1.0-0'}}</mat-label>
+
+            <mat-icon color="accent" aria-label="Newest post date icon" style="grid-area: r4c1;">view_comfy</mat-icon>
+            <mat-label style="grid-area: r4c2;">Newest post date</mat-label>
+            <mat-label style="grid-area: r4c3;">{{statsModel.newestPost | date:'short'}}</mat-label>
+
+            <mat-icon color="accent" aria-label="Oldest post date icon" style="grid-area: r5c1;">view_comfy</mat-icon>
+            <mat-label style="grid-area: r5c2;">Oldest post date</mat-label>
+            <mat-label style="grid-area: r5c3;">{{statsModel.oldestPost | date:'short'}}</mat-label>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,6 +1,10 @@
 {
   "name": "angular-data-stream-reader",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jonathan Avendano Jimenez"
+  },
+  "description": "Angular application that consumes a dataStream from Twitter via PubNub",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,13 +15,18 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
+    "@angular/cdk": "~11.2.11-sha-b5ee92fbe",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
     "@angular/forms": "~12.2.0",
+    "@angular/material": "~11.2.11-sha-b5ee92fbe",
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@ngrx/effects": "^12.5.1",
+    "@ngrx/store": "^12.5.1",
+    "@ngrx/store-devtools": "^12.5.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -26,14 +35,19 @@
     "@angular-devkit/build-angular": "~12.2.11",
     "@angular/cli": "~12.2.11",
     "@angular/compiler-cli": "~12.2.0",
+    "@angular/material": "^11.2.12",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
+    "eslint": "7.32.0",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-prefer-arrow": "1.2.3",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "remote-redux-devtools": "^0.5.16",
     "typescript": "~4.3.5"
   }
 }
