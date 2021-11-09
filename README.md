@@ -1,7 +1,8 @@
 # DataStream Reader Emulator with Angular version 12.2.11 + NGRX + Angular Material
 
-This project is to showcase how to consume a data-stream endpoints using [Angular][angular] and [RGRX][ngrx] State Management solution.
-Important: The "real-data stream" is an emulation built on this project. It consists of a service that performs GET petitions to an api in a certain time interval. The API will return 
+This project is to showcase how to consume and interact with a data-stream endpoint using Angular and NGRX to create a state Management solution.
+
+Important: The "real-data stream service" is an emulation built-in ont this project. It consists of a service that performs GET petitions by time intervals. 
 
 ## Demo
 
@@ -10,9 +11,9 @@ You can fnd:
 
 ## Tech Stack
 
-- [Angular][angular]
-- [RGRX][ngrx]
-- [Angular Material][angularmaterial]
+- Angular
+- RGRX
+- Angular Material
 
 ## Features
 
