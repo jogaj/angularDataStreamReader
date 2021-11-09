@@ -24,6 +24,14 @@ An Angular application to stream real time posts.
 - Ability to filter data.
 - Scroll panel with the list of post per request with Virtual Scroll (Angular CDK)
 
+The application automatically will retrieve data from the API and also start collecting the statistics. When a filter is applied, the statistics are reset to collect the new information based on the filter.
+
+## How to Run project locally
+- Download the code.
+- Open project and execute the command: 'npm install' or 'yarn install'
+- Additionally, execute command: 'ng serve'
+- Finally, open your browser in url: https://localhost:4200
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
