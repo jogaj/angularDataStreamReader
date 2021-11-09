@@ -6,8 +6,8 @@ Important: The "real-data stream service" is an emulation built-in ont this proj
 
 ## Demo
 
-You can fnd:
-
+You can find a live demo here:
+https://jogaj.github.io/angularDataStreamReader/
 
 ## Tech Stack
 

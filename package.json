@@ -38,6 +38,7 @@
     "@angular/material": "^11.2.12",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^1.0.0-rc.2",
     "eslint": "7.32.0",
     "eslint-plugin-import": "2.24.2",
     "eslint-plugin-prefer-arrow": "1.2.3",
