@@ -43,7 +43,7 @@ export class DataStreamServiceEmuService {
    * Calculates the total pages and current page by using the api response
    * @param data Data from api
    */
-  private calculatePage(data: IPostResp): void {
+  public calculatePage(data: IPostResp): void {
     this.totalPages = Math.floor(data.total / data.limit);
     if (this.currentPage <= this.totalPages) {
       this.currentPage += 1;

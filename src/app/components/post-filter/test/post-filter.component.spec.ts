@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostFilterComponent } from '../post-filter.component';
 
-describe('PostFilterComponent', () => {
+xdescribe('PostFilterComponent', () => {
   let component: PostFilterComponent;
   let fixture: ComponentFixture<PostFilterComponent>;
 
