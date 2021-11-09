@@ -20,6 +20,8 @@ export class InterceptorService implements HttpInterceptor {
    */
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     // Create header api key
+    // This is the key of the api. It is not good practice to have the key hardcoded
+    // and must no be added in the project but the api es free and for developers
     const headers = new HttpHeaders({
       'app-id' : '618623839d51561ba2031722'
     });
