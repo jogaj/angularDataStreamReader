@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 
@@ -11,11 +11,12 @@ import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-post-statistics',
   templateUrl: './post-statistics.component.html',
-  styleUrls: ['./post-statistics.component.scss']
+  styleUrls: ['./post-statistics.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostStatisticsComponent implements OnInit, OnDestroy {
 
-  constructor(private store: Store<AppState>) { 
+  constructor(private store: Store<AppState>, private cdtr: ChangeDetectorRef) { 
   }
 
   /**
@@ -64,6 +65,7 @@ export class PostStatisticsComponent implements OnInit, OnDestroy {
 
     this.statsCalcSubs = this.store.pipe(select(statsCalcSelector)).subscribe((model)=>{
       this.statsModel = model;
+      this.cdtr.detectChanges();
     })
   }
 

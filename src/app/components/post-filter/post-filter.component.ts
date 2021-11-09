@@ -65,6 +65,8 @@ export class PostFilterComponent implements OnInit, OnDestroy {
   filterHandler(): void {
     if (this.validateOnFilterHandler()) {
       this.setFilter(true);
+    } else {
+      this.filterModel.filterValue = '';
     }
   }
 
